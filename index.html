@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #f27024; /* FPT Orange */
+            --primary-color: #f27024;
+            /* FPT Orange */
             --primary-dark: #d95e1c;
             --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             --card-bg: rgba(255, 255, 255, 0.05);
@@ -79,8 +81,13 @@
         }
 
         @keyframes float {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(30px, -50px) scale(1.1); }
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            100% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
         }
 
         .container {
@@ -91,8 +98,15 @@
         }
 
         @keyframes slideUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Glassmorphism card */
@@ -172,9 +186,11 @@
             .questions-grid {
                 grid-template-columns: 1fr;
             }
+
             .exam-card {
                 padding: 2rem;
             }
+
             .header h1 {
                 font-size: 2rem;
             }
@@ -207,11 +223,22 @@
             width: 4px;
             height: 100%;
         }
-        
-        .q1 .q-accent { background: var(--accent-blue); }
-        .q2 .q-accent { background: var(--accent-green); }
-        .q3 .q-accent { background: var(--accent-purple); }
-        .q4 .q-accent { background: var(--accent-red); }
+
+        .q1 .q-accent {
+            background: var(--accent-blue);
+        }
+
+        .q2 .q-accent {
+            background: var(--accent-green);
+        }
+
+        .q3 .q-accent {
+            background: var(--accent-purple);
+        }
+
+        .q4 .q-accent {
+            background: var(--accent-red);
+        }
 
         .q-header {
             display: flex;
@@ -232,10 +259,25 @@
             color: #fff;
         }
 
-        .q1 .q-number { background: rgba(56, 189, 248, 0.2); color: var(--accent-blue); }
-        .q2 .q-number { background: rgba(52, 211, 153, 0.2); color: var(--accent-green); }
-        .q3 .q-number { background: rgba(192, 132, 252, 0.2); color: var(--accent-purple); }
-        .q4 .q-number { background: rgba(251, 113, 133, 0.2); color: var(--accent-red); }
+        .q1 .q-number {
+            background: rgba(56, 189, 248, 0.2);
+            color: var(--accent-blue);
+        }
+
+        .q2 .q-number {
+            background: rgba(52, 211, 153, 0.2);
+            color: var(--accent-green);
+        }
+
+        .q3 .q-number {
+            background: rgba(192, 132, 252, 0.2);
+            color: var(--accent-purple);
+        }
+
+        .q4 .q-number {
+            background: rgba(251, 113, 133, 0.2);
+            color: var(--accent-red);
+        }
 
         .question-title {
             font-size: 1.2rem;
@@ -248,13 +290,14 @@
             font-size: 0.95rem;
             flex-grow: 1;
         }
-        
+
         .question-desc strong {
             color: #fff;
             font-weight: 600;
         }
 
-        .file-tag, .key-tag {
+        .file-tag,
+        .key-tag {
             display: inline-block;
             background: rgba(255, 255, 255, 0.1);
             padding: 0.2rem 0.6rem;
@@ -263,12 +306,12 @@
             font-size: 0.85rem;
             color: #e2e8f0;
             margin: 0 0.1rem;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .key-tag {
-            background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
-            border-bottom: 2px solid rgba(255,255,255,0.2);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
             font-weight: bold;
         }
 
@@ -312,19 +355,24 @@
             font-size: 0.9rem;
             color: #fff;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: background 0.2s;
+            transition: all 0.2s;
             font-family: monospace;
+            text-decoration: none;
+            cursor: pointer;
         }
 
         .file-box:hover {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(56, 189, 248, 0.2);
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+            transform: translateY(-2px);
         }
 
         .file-box svg {
             margin-right: 0.5rem;
-            width: 16px;
-            height: 16px;
-            color: #94a3b8;
+            width: 18px;
+            height: 18px;
+            color: currentColor;
         }
 
         footer {
@@ -335,9 +383,11 @@
         }
 
         /* Hover animations for tags */
-        .key-tag, .file-tag {
+        .key-tag,
+        .file-tag {
             transition: all 0.2s;
         }
+
         .question-item:hover .key-tag {
             transform: translateY(-2px);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
@@ -346,6 +396,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="bg-shapes">
@@ -355,22 +406,25 @@
 
     <div class="container">
         <div class="exam-card">
-            
+
             <div class="header">
                 <span class="logo-text">Cao Đẳng FPT Polytechnic</span>
                 <h1>Đề Thi Thực Hành</h1>
-                <p>Môn: <strong>Nhập Môn Lập Trình</strong> &nbsp;|&nbsp; Sử dụng source code: <strong>Bài ASM</strong></p>
+                <p>Môn: <strong>Nhập Môn Lập Trình</strong> &nbsp;|&nbsp; Sử dụng source code: <strong>Bài ASM</strong>
+                </p>
             </div>
 
             <div class="instruction-badge">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                 </svg>
                 Yêu cầu: Sinh viên sử dụng source code bài tập lớn (ASM) để thay đổi và bổ sung các tính năng dưới đây.
             </div>
 
             <div class="questions-grid">
-                
+
                 <!-- Câu 1 -->
                 <div class="question-item q1">
                     <div class="q-accent"></div>
@@ -379,9 +433,11 @@
                         <div class="question-title">Animation Nhân Vật</div>
                     </div>
                     <div class="question-desc">
-                        Thay nhân vật mặc định bằng animation mới sử dụng asset từ file <span class="file-tag">player.png</span>.
+                        Thay nhân vật mặc định bằng animation mới sử dụng asset từ file <span
+                            class="file-tag">player.png</span>.
                         <br><br>
-                        <strong>Yêu cầu:</strong> Phải có tối thiểu <strong>2 animation</strong> khác nhau hoạt động được (ví dụ: Run, Idle, Jump, ...).
+                        <strong>Yêu cầu:</strong> Phải có tối thiểu <strong>2 animation</strong> khác nhau hoạt động
+                        được (ví dụ: Run, Idle, Jump, ...).
                     </div>
                 </div>
 
@@ -393,9 +449,11 @@
                         <div class="question-title">Thiết Kế Tilemap</div>
                     </div>
                     <div class="question-desc">
-                        Xây dựng và thiết kế một <strong>Tilemap mới</strong> thay thế cho bản đồ mặc định trong game, sử dụng asset từ file <span class="file-tag">tile.png</span>.
+                        Xây dựng và thiết kế một <strong>Tilemap mới</strong> thay thế cho bản đồ mặc định trong game,
+                        sử dụng asset từ file <span class="file-tag">tile.png</span>.
                         <br><br>
-                        <strong>Yêu cầu:</strong> Map mới phải được xây dựng logic, có các platform để nhân vật di chuyển hợp lý.
+                        <strong>Yêu cầu:</strong> Map mới phải được xây dựng logic, có các platform để nhân vật di
+                        chuyển hợp lý.
                     </div>
                 </div>
 
@@ -407,9 +465,11 @@
                         <div class="question-title">Rơi Vật Phẩm</div>
                     </div>
                     <div class="question-desc">
-                        Lập trình sự kiện bấm phím <span class="key-tag">G</span>: Khi bấm nút <span class="key-tag">G</span>, ở vị trí phía trên đầu nhân vật sẽ rơi ra vật phẩm (bình thuốc).
+                        Lập trình sự kiện bấm phím <span class="key-tag">G</span>: Khi bấm nút <span
+                            class="key-tag">G</span>, ở vị trí phía trên đầu nhân vật sẽ rơi ra vật phẩm (bình thuốc).
                         <br><br>
-                        <strong>Yêu cầu:</strong> Mỗi lần bấm phím <span class="key-tag">G</span> chỉ được phép sinh ra đúng <strong>1 bình thuốc</strong>.
+                        <strong>Yêu cầu:</strong> Mỗi lần bấm phím <span class="key-tag">G</span> chỉ được phép sinh ra
+                        đúng <strong>1 bình thuốc</strong>.
                     </div>
                 </div>
 
@@ -421,9 +481,12 @@
                         <div class="question-title">Xóa Bỏ Vật Lý</div>
                     </div>
                     <div class="question-desc">
-                        Lập trình sự kiện phím <span class="key-tag">H</span>: Khi bấm nút <span class="key-tag">H</span>, nhân vật sẽ bị mất hoàn toàn hiệu ứng vật lý (ví dụ: mất trọng lực, không xét va chạm nền).
+                        Lập trình sự kiện phím <span class="key-tag">H</span>: Khi bấm nút <span
+                            class="key-tag">H</span>, nhân vật sẽ bị mất hoàn toàn hiệu ứng vật lý (ví dụ: mất trọng
+                        lực, không xét va chạm nền).
                         <br><br>
-                        <strong>Yêu cầu:</strong> Nhân vật sẽ bị rơi tự do qua map, không còn đứng được ở trên mặt đất nữa.
+                        <strong>Yêu cầu:</strong> Nhân vật sẽ bị rơi tự do qua map, không còn đứng được ở trên mặt đất
+                        nữa.
                     </div>
                 </div>
 
@@ -431,24 +494,30 @@
 
             <div class="resources">
                 <div class="resources-title">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />
                     </svg>
                     Asset được yêu cầu sử dụng đi kèm:
                 </div>
                 <div class="file-list">
-                    <div class="file-box">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    <a href="player.png" download="player.png" class="file-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
                         </svg>
-                        player.png
-                    </div>
-                    <div class="file-box">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        Tải player.png
+                    </a>
+                    <a href="tile.png" download="tile.png" class="file-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
                         </svg>
-                        tile.png
-                    </div>
+                        Tải tile.png
+                    </a>
                 </div>
             </div>
 
@@ -459,4 +528,5 @@
     </div>
 
 </body>
+
 </html>
